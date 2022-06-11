@@ -12,9 +12,14 @@
     
 # Why we need pymon
 
-    Let's imagine that you have to develope a project with python,
+    Let's imagine that you have
+
+
+    to develope a project with python,
     
-    then to check you'r code every time you have to type same command
+    then to check you'r code every
+
+    time you have to type same command
     
     every time and it's take many time,
     
