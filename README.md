@@ -20,3 +20,18 @@
     
 # How to use pymon
     
+    We have many commands, they are =>
+        
+        ( 1 ) pymon run $filename => this command executive you'r python file with pymon.
+        
+        ( 2 ) pymon rerun $filename => this command help you to re-executive python file with python.
+                                       $filename argument => you have to pass the same name that you use in ( 1 )
+                                       first command.
+        
+        ( 3 ) pymon runwithcommand $filename $command => this command help you to executive python file with
+                                                         custom command for eg. ( python demo.py customCommand ) .
+                                                         $filename argument => you have to pass the same name that you use in ( 1 )
+                                                         first command.
+                                                         $command => custom command.
+                                                         
+                                                 
