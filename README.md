@@ -34,4 +34,11 @@
                                                          first command.
                                                          $command => custom command.
                                                          
-                                                 
+        ( 4 ) pymon stop $filename => this command help you to stop running file.
+                                      $filename argument => you have to pass the same name that you use in ( 1 )
+                                      first command.
+        
+        ( 5 ) pymon stopall => this command help you to stop all running file.
+        
+        
+        
