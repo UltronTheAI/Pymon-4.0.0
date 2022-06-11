@@ -103,6 +103,7 @@ def run(filename):
                 time.sleep(0.5)
                 if filename in jdata['re_run']:
                     with open(filename, 'r') as f:
+                        fr = f.read()
                         jdata = readPymon()
                         res = delvalue(jdata['re_run'], filename)
                         if res != 'This file is not valid !':
@@ -112,18 +113,19 @@ def run(filename):
                         reStart(filename)
                         app.terminate()
                         app = subprocess.Popen([getVersion(), filename])
-                        text = f.read()
+                        text = fr
                         f.close()
                 else: pass
                 if filename in jdata['filename']:
                     with open(filename, 'r') as f:
-                        if text == f.read():
+                        fr = f.read()
+                        if text == fr:
                             pass
                         else:
                             app.terminate()
                             reStart(filename)
                             app = subprocess.Popen([getVersion(), filename])
-                            text = f.read()
+                            text = fr
                         f.close()
                 else:
                     stopText(filename)
@@ -169,6 +171,7 @@ def runWithCommand(filename, command):
                 time.sleep(0.5)
                 if filename in jdata['re_run']:
                     with open(filename, 'r') as f:
+                        fr = f.read()
                         jdata = readPymon()
                         jdata['re_run'] = []
                         writePymon(jdata)
@@ -178,12 +181,13 @@ def runWithCommand(filename, command):
                         for i in command.split(' '):
                             newlist.append(i)
                         app = subprocess.Popen(newlist)
-                        text = f.read()
+                        text = fr
                         f.close()
                 else: pass
                 if filename in jdata['filename']:
                     with open(filename, 'r') as f:
-                        if text == f.read():
+                        fr = f.read()
+                        if text == fr:
                             pass
                         else:
                             app.terminate()
@@ -192,7 +196,7 @@ def runWithCommand(filename, command):
                             for i in command.split(' '):
                                 newlist.append(i)
                             app = subprocess.Popen(newlist)
-                            text = f.read()
+                            text = fr
                         f.close()
                 else:
                     stopText(filename)
