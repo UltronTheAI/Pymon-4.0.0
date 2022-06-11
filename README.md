@@ -8,7 +8,7 @@
     
 # What's new in pymon 4.0.0
 
-    Now pymon is more faster that old older versions of pymon
+    Now pymon is more faster than older versions of pymon
     
 # Why we need pymon
 
